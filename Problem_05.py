@@ -1,6 +1,3 @@
-import sys
-
-
 def calculate_fine(book_title, days_overdue, daily_rate=5.0, max_fine=150.0):
     fine = days_overdue * daily_rate
 
@@ -10,16 +7,17 @@ def calculate_fine(book_title, days_overdue, daily_rate=5.0, max_fine=150.0):
     return fine
 
 
-book_title = " ".join(sys.argv[1:-3])
-days_overdue = int(sys.argv[-3])
-daily_rate = float(sys.argv[-2])
-max_fine = float(sys.argv[-1])
+book_title = input()
+days_overdue = int(input())
+daily_rate = float(input())
+max_fine = float(input())
 
 fine = calculate_fine(book_title, days_overdue, daily_rate, max_fine)
 
-print("Book:", book_title)
-print("Days overdue:", days_overdue)
-print("Fine: Rs.", float(fine))
+print(f"Book: {book_title}")
+print(f"Days overdue: {days_overdue}")
+print(f"Fine: Rs. {float(fine)}")
+
 
 
 
